@@ -1,5 +1,7 @@
  const button = document.getElementById('resultButton');
 
+ const resetButton = document.getElementById('resetButton');
+
  const name = document.getElementById('name');
 
  const weight = document.getElementById('weight');
@@ -8,7 +10,11 @@
 
  const result = document.getElementById('result');
 
+ const resetName = document.getElementById('name')
 
+ const resetHeight = document.getElementById('Height')
+ const resetWeight = document.getElementById('Weight')
+ 
 const getText = (imc) => {
 
     if (imc > 40) {
@@ -38,9 +44,17 @@ const getText = (imc) => {
     }
 
     const imcValue = (+weight.value / (+height.value * +height.value)).toFixed(1);
+
     console.log(weight.value , height.value, name.value);
+    
     result.textContent = `${name.value} , ${getText(imcValue)}`;
  }
 
+const resetBtn= () => {
+    result.textContent = ''
+    weight. = ''
+}
 
+
+resetButton.addEventListener('click',resetBtn)
  button.addEventListener('click',imcCalc);
