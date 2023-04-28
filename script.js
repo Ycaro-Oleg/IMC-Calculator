@@ -52,7 +52,6 @@ const getText = (imc) => {
 
 const resetBtn= () => {
     result.textContent = ''
-    weight. = ''
 }
 
 
